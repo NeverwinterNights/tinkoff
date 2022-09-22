@@ -7,7 +7,7 @@ import {db} from "../utils/firebase";
 type ProfileDataType = {
     id: string
     displayName: string
-    docId: string
+    docID: string
 }
 
 export const useProfile = () => {
@@ -26,10 +26,11 @@ export const useProfile = () => {
             setProfile(profile)
             setName(profile.displayName)
             setIsLoading(false)
+
         }), []
     )
     return useMemo(() => ({
         profile, isLoading, name, setName
-    }), [])
+    }), [profile, isLoading, name])
 
 }

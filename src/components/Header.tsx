@@ -11,12 +11,18 @@ import {Loader} from "./Loader";
 type HeaderPropsType = {}
 
 export const Header = ({}: HeaderPropsType) => {
-     const {isLoading, name} = useProfile()
+
+
+    const {isLoading, name} = useProfile()
     const navigation = useAppNavigation()
+
+    console.log("isLoading", isLoading)
+    console.log("name", name)
+
     return isLoading ? <Loader/> : (
         <Padding style={"flex-row items-center"}>
             <Avatar name={name}/>
-            <TouchableOpacity className="flex-row items-end" onPress={()=> navigation.navigate("ProfileScreen")}>
+            <TouchableOpacity className="flex-row items-end" onPress={() => navigation.navigate("ProfileScreen")}>
                 <Text className="text-gray-800">{name}</Text>
             </TouchableOpacity>
             <Entypo name="chevron-small-right" size={28} color={"grey"}/>
