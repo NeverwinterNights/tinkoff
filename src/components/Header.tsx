@@ -6,6 +6,7 @@ import {useAppNavigation} from "../navigation/types";
 import {Entypo} from '@expo/vector-icons';
 import {useProfile} from "../hooks/useProfile";
 import {Loader} from "./Loader";
+import {randomCardNumber} from "../utils/randomCardNumber";
 
 
 type HeaderPropsType = {}
@@ -15,9 +16,6 @@ export const Header = ({}: HeaderPropsType) => {
 
     const {isLoading, name} = useProfile()
     const navigation = useAppNavigation()
-
-    console.log("isLoading", isLoading)
-    console.log("name", name)
 
     return isLoading ? <Loader/> : (
         <Padding style={"flex-row items-center"}>

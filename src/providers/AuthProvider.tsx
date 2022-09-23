@@ -31,9 +31,6 @@ export const AuthProvider = ({children}: { children: ReactNode }) => {
 
 
     const registerHandler = async (email: string, password: string) => {
-        console.log ("email", email)
-        console.log ("password", password)
-
         setIsLoading(true)
         try {
             const {user} = await register(email, password)

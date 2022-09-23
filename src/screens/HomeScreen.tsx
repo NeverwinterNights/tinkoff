@@ -1,8 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import {Header} from "../components/Header";
 import {Layout} from "../components/Layout";
 import {Stories} from "../components/Stories";
+import {Accounts} from "../components/account/Accounts";
+import {AddNewProduct} from "../components/AddNewProduct";
 
 type HomeScreenPropsType = {}
 
@@ -11,7 +13,8 @@ export const HomeScreen = () => {
         <Layout>
             <Header/>
             <Stories/>
-            <Text>HomeScreen</Text>
+            <Accounts/>
+            <AddNewProduct/>
         </Layout>
     );
 };
