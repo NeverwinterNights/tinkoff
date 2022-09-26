@@ -4,7 +4,7 @@ import {db} from "../utils/firebase";
 import {useAuth} from "./useAuth";
 
 export type  CurrencyType = "RUB" | "USD"
-export type  NameType = "Black" | "All"
+export type  NameType = "Tin Black" | "Tin All"
 
 
 export type AccountsType = {

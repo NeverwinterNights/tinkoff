@@ -24,7 +24,9 @@ export const Accounts = ({}: AccountsPropsType) => {
     return (
         <Padding>
             {isLoading ? <Loader/> : accounts.length ?
-                <FlatList nestedScrollEnabled data={accounts} keyExtractor={(item) => item.id} ItemSeparatorComponent={ListItemSeparator} renderItem={({item})=> renderFunction(item)}/> :
+                accounts.map((item)=> renderFunction(item))
+                // <FlatList nestedScrollEnabled scrollEnabled={false} data={accounts} keyExtractor={(item) => item.id} ItemSeparatorComponent={ListItemSeparator} renderItem={({item})=> renderFunction(item)}/>
+                :
                 <Text>You don't ave any cards</Text>}
         </Padding>
     );

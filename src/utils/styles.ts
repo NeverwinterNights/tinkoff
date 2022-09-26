@@ -6,7 +6,7 @@ export const BOX_SHADOW = {
     },
     shadowOpacity: 0.15,
     shadowRadius: 10,
-    elevation: 5
+    elevation: 10
 }
 
 export  const styleCenter = "h-full w-full bg-white pt-16"

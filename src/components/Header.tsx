@@ -20,7 +20,11 @@ export const Header = ({}: HeaderPropsType) => {
     return isLoading ? <Loader/> : (
         <Padding style={"flex-row items-center"}>
             <Avatar name={name}/>
-            <TouchableOpacity className="flex-row items-end" onPress={() => navigation.navigate("ProfileScreen")}>
+            <TouchableOpacity className="flex-row items-end" onPress={() => navigation.navigate("TabNavigator",
+                {
+                    screen: "Home",
+                    params: {screen: "ProfileScreen"}
+                })}>
                 <Text className="text-gray-800">{name}</Text>
             </TouchableOpacity>
             <Entypo name="chevron-small-right" size={28} color={"grey"}/>

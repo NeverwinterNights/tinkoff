@@ -4,7 +4,7 @@ import {collection, limit, onSnapshot, query, where} from "firebase/firestore";
 import {db} from "../utils/firebase";
 
 
-type ProfileDataType = {
+export type ProfileDataType = {
     id: string
     displayName: string
     docID: string
@@ -27,7 +27,9 @@ export const useProfile = () => {
             setName(profile.displayName)
             setIsLoading(false)
 
-        }), []
+        }
+
+        ), []
     )
     return useMemo(() => ({
         profile, isLoading, name, setName

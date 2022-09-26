@@ -1,20 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Layout} from "../components/Layout";
+import {Title} from "../components/Title";
+import {Contacts} from "../components/payments/Contacts";
+import {Other} from "../components/payments/Other";
+import {View} from "react-native";
 
-type PaymentsScreenPropsType = {
+type PaymentsScreenPropsType = {}
 
-}
-
-export const PaymentsScreen = ({}:PaymentsScreenPropsType) => {
- return (
-       <View style={styles.container}>
-          <Text>PaymentsScreen</Text>
-        </View>
+export const PaymentsScreen = ({}: PaymentsScreenPropsType) => {
+    return (
+        <Layout>
+            <Title text="Payment"/>
+            <Contacts/>
+            <Other/>
+        </Layout>
     );
 };
 
-const styles = StyleSheet.create({
-  container: {
-
-  }
-});
