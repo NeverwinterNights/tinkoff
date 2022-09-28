@@ -1,21 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text} from 'react-native';
+import {Layout} from "../components/Layout";
+import {Title} from "../components/Title";
+import {Padding} from "../components/Padding";
+import {Currencies} from "../components/more/Currencies";
+import {Menu} from "../components/more/Menu";
 
-type MoreScreenPropsType = {
+type MoreScreenPropsType = {}
 
-}
 
-export const MoreScreen = ({}:MoreScreenPropsType) => {
- return (
-       <View style={styles.container}>
-           <Text>MoreScreen</Text>
+export const MoreScreen = ({}: MoreScreenPropsType) => {
 
-       </View>
+
+    return (
+        <Layout>
+            <Title text="More"/>
+            <Padding>
+                <Currencies/>
+                <Menu/>
+                <Text className="opacity-50 text-center text-gray-500 my-4">Version 1.0.0</Text>
+            </Padding>
+
+        </Layout>
     );
 };
 
-const styles = StyleSheet.create({
-  container: {
-
-  }
-});

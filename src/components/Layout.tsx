@@ -9,7 +9,7 @@ type LayoutPropsType = {
 export const Layout: FC<LayoutPropsType> = ({children, isScrollView = true}) => {
     return (
         <View className="bg-white w-full h-full pt-16">
-            {isScrollView ? <ScrollView>{children}</ScrollView> : children}
+            {isScrollView ? <ScrollView nestedScrollEnabled>{children}</ScrollView> : children}
         </View>
     );
 };

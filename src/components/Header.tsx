@@ -6,7 +6,6 @@ import {useAppNavigation} from "../navigation/types";
 import {Entypo} from '@expo/vector-icons';
 import {useProfile} from "../hooks/useProfile";
 import {Loader} from "./Loader";
-import {randomCardNumber} from "../utils/randomCardNumber";
 
 
 type HeaderPropsType = {}

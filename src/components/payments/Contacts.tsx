@@ -1,6 +1,5 @@
 import React from 'react';
-import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
-import * as querystring from "querystring";
+import {FlatList, View} from 'react-native';
 import {useContacts} from "../../hooks/useContacts";
 import {SubTitle} from "../SubTitle";
 import {Loader} from "../Loader";

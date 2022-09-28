@@ -2,11 +2,14 @@ import {Alert} from "react-native";
 import {collection, doc, getDoc, getDocs, limit, query, updateDoc, where} from "firebase/firestore";
 import {db} from "./firebase";
 import {AccountsType} from "../hooks/useAccounts";
+import Prompt from "react-native-prompt-cross";
 
-export const handleTransfer = async (fromAccount: AccountsType, cardNumber: string) => {
-    console.log ("value1111111")
-    Alert.prompt("Sum transfer", "Enter transfer amount:",
-        async (sum) => {
+
+// export const handleTransfer = async (fromAccount: AccountsType, cardNumber: string) => {
+export const handleTransfer = async (fromAccount: AccountsType, cardNumber: string, sum:string) => {
+
+    // Alert.prompt("Sum transfer", "Enter transfer amount:",
+    //     async (sum) => {
             try {
                 let accountToId = ""
                 let currentToBalance = ""
@@ -37,7 +40,7 @@ export const handleTransfer = async (fromAccount: AccountsType, cardNumber: stri
             } catch (error) {
                 Alert.alert("Error transfer", error)
             }
-        }
-    )
+        // }
+    // )
 
 }
